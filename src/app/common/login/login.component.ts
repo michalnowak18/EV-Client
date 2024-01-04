@@ -35,6 +35,10 @@ export class LoginComponent {
     this.token = this.authService.token;
     if (this.authService.isTokenExpired(this.token)) {
       this.authService.removeToken();
+    } else {
+      if (this.authService.getUserId()) {
+        this.router.navigate(['users/' + this.authService.getUserId() + '/appointments']);
+      }
     }
 
     document.getElementById('focusReset')?.focus();
