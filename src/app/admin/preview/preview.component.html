@@ -8,7 +8,7 @@
         Szczegóły użytkownika: {{user.name}}
       </h1>
     </div>
-    <div class="col-12 col-lg-6 mb-2 mb-md-0">
+    <div class="col-12 col-lg-6 mb-2 mb-md-0" *ngIf="user.name !== 'admin'">
       <div class="row flex-nowrap justify-content-end mt-2 mt-md-0" *ngIf="user.email">
         <div class="col-6 col-md-auto">
           <button class="w-100 h-100 btn btn-outline-primary"
