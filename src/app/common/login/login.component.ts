@@ -64,10 +64,10 @@ export class LoginComponent {
 
   public loginSubmit() {
     if (this.validateForm()) {
-      this.preloader.show();
       let formGroupValue = this.formGroup.value;
       let user = new LoginDto(formGroupValue.login, formGroupValue.password, '');
 
+      this.preloader.show();
       this.authService.login(user).subscribe(result => {
         if (result.token) {
           this.preloader.hide();

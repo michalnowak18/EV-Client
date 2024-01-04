@@ -7,7 +7,7 @@
   <div class="row justify-content-center">
     <section class="d-flex justify-content-center align-items-center flex-column">
       <h2 class="mb-0">Bład 403</h2>
-      <p class="mb-0">Strona, na którą próbujesz wejść wymaga większych uprawnień.</p>
+      <p class="mb-0 text-center">Strona, na którą próbujesz wejść wymaga większych uprawnień.</p>
       <p *ngIf="userId !== null">Wróc do <a routerLink="/users/{{this.userId}}/appointments">strony głównej</a></p>
       <p *ngIf="userId === null">Wróc do <a routerLink="/login">strony głównej</a></p>
     </section>
