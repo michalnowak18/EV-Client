@@ -124,8 +124,9 @@ export class SurveyRegistrationComponent {
 
   private sortAvailabilityList() {
     this.availabilityList.sort((a, b) => {
-      const daysOrder = ['poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota', 'niedziela'];
-      return daysOrder.indexOf(a.dayOfWeek.toLowerCase()) - daysOrder.indexOf(b.dayOfWeek.toLowerCase());
+      const dateA = new Date(a.date).setHours(0, 0, 0, 0);
+      const dateB = new Date(b.date).setHours(0, 0, 0, 0);
+      return dateA - dateB;
     });
   }
 
